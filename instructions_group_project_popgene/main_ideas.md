@@ -42,6 +42,8 @@ Ask me questions about the analyses and the literature.
 
 ```
 
+For the mapping and variant calling you can look into this tutorial (https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/instructions_group_project_popgene/mapping_variantcall.md). For the VCF filtering and population genetic analyses you can look in the tutorial of practical session 4 (https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/Instructions_practical4.md).
+
 Key papers to read:
 ```
 - Li et al. 2016. Genetic architecture and evolution of the S locus supergene in Primula vulgaris. Nature Plants 12:1-7
