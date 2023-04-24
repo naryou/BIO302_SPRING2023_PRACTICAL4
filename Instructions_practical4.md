@@ -62,6 +62,9 @@ With this VCF file we can now do a lot of population genetic analyses.
 
 # Analzying population structure with: STRUCTURE
 
+*Narcis's edits here*
+Structure is a software based on Bayesian method that is used to group the individuals based on similarity in their genetic variation >>> to infere the presence of different distinct populations, and proportion of ancestry and admixture in individuals. 
+
 # Population genomic analyses with Rstudio
 
 Galaxy has (apparently) many tools to analyze genetic structure and estimate genetic diveristy. However, some of these tools have been outdated so we cannot use them. For that reason we will use R to make some of the basic analyses. In reality we do these analyses in the command line using (mostly) UNIX or python languages. Fortunately, you will not need have to do any UNIX stuff. However, if you are curious on how this looks like you can ask me or any of the other TAs so that you see how each tool looks like in the command line.
