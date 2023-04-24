@@ -38,6 +38,8 @@ What are you expected to do in this project:
 If there is time (and you are interested):
 - Determine what is the genetic basis of the transition from heterostyly to homostyly
 
+Ask me questions about the analyses and the literature.
+
 ```
 
 Key papers to read:
