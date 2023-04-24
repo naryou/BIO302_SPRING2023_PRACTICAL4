@@ -4,7 +4,7 @@ In your second practical session you did a variant calling. Just as a reminder y
 
 Often after the variant calling we end up with a very messy and long VCF file that is full of sequencing errors, genotyping errors during variant calling, some invariant sites that tell nothing about diversity and so on. So we need to do some cleaning of the VCF file to keep high quality sequencing sites so that we can perform some analyses.
 
-For this paer of the practical you will use the file called 'BIO302_practical_filtering.vcf.gz' that I sent you in the email. You can download the file here ().
+For this paer of the practical you will use the file called 'BIO302_practical_filtering.vcf.gz' that I sent you in the email. You can download the file here (https://wetransfer.com/downloads/f95a2d784ff8c6eb2b43c8fcccb3ac9020230424070021/c59faa7fd8ec72778f2551a7543b619120230424070041/1febb0).
 
 Upload this file into your Galaxy account.
 
