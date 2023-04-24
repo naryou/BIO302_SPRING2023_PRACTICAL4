@@ -123,17 +123,26 @@ To do the PCA we need to change the format of the VCF file
 
 ```
 df_genlight <- vcfR2genlight(df, n.cores = 7)
+
+POPS <-c("RS170","RS170","RS170","RS170","RS170","RS170","RS170","RS170","RS170","RS170",
+         "RS180","RS180","RS180","RS180","RS180","RS180","RS180","RS180","RS180","RS180",
+         "RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01") # Here we create a vector with the population information
+         
+df_genlight@pop <- as.factor(POPS) #Here we add the population information (POPS) into the genlight file (df_genlight)
 ```
 
 Now we can proceed to do the PCA with the following command:
 
 ```
 pca1 <- glPca(df_genlight)
+
+myCol <- s.class(pca1$scores,pop(df_genlight), col=c("blue", "red", "green"))
+add.scatter.eig(pca1$eig,posi = "bottomright", 2,2,1)
 ```
 
-You will need to specify the number of axes (eigenvalues) to use. One plot was created automatically, you can see that the very first eigenvalues explain a lot of the variance. The more axes we keep the more resulting we get in the PCA. In this case we indicate that we want to keep the first 'XX' eigenvalues.
+You will need to specify the number of axes (eigenvalues) to use. One plot was created automatically, you can see that the very first eigenvalues explain a lot of the variance. The more axes we keep the more resulting we get in the PCA. In this case we indicate that we want to keep the first '10' eigenvalues.
 
-**Question:** How do the results looks like? Do the populations overlap on the DAPC or PCA? Do the results align with the results of the STRUCTURE analysis?
+**Question:** How do the results looks like? Do the populations overlap on the PCA? Do the results align with the results of the STRUCTURE analysis?
 
 
 # Analyzing genetic diversity with PopGenome
