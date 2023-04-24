@@ -1,28 +1,22 @@
 # Group project for BIO302
 ## Population genomic consequences of the range expansion and the transition to self-fertilization in of Primula vulgaris
 
-Primula vulgaris aka the common primrose is a very charismatic plant that flowers around this time of the year (March-May). This plant has also played 
-a key role as a model for ecological and evolutionary work since the 1940's. It is also quite pretty. This plant has a wide distribution from Asia (the Caucacus region) to
-all the British Isles. You can find it in almost all continental Europe and in many mediterranean Islands. It has been suggested that P. vulagris
-and its most closely related species originated in Asia and expanded its distribution from to the west during the Quaternary. This expansion
-could have lead to the accumulation of genomic consequences.
+*Primula vulgaris* aka the common primrose is a very charismatic plant that flowers around this time of the year (March-May). This plant has also played 
+a key role as a model for ecological and evolutionary work since the 1940's. It is also quite pretty. This plant has a wide distribution from Asia (the Caucacus region) to all the British Isles. You can find it in almost all continental Europe and in many mediterranean Islands. It has been suggested that *P. vulgaris* and its most closely related species originated in Asia and expanded its distribution from to the west during the Quaternary. This expansion could have lead to the accumulation of genomic consequences.
 
 Primroses have also been a model to study the consequences of the transition from outcrossing to self-fertilization. This mating system transition
-is very common in plants and can also lead to consequences at the genomic level (Wright et al., 2007; 2013). In P. vulgaris, this transition is represented by the shift from
-heterostyly to homostyly (Li et al., 2016; Huu et al., 2016). Heterostyly is a floral polymorphism that promotes outcrossing that has been reported in 
-at least 28 families of plants. Conversely, homostyly is associated with self-fertilization. This transistion has occured in many species of Primula. 
-In this species, the transition to homostyly has been reported in England (Mora-Carrera et al., 2021).
+is very common in plants and can also lead to consequences at the genomic level (Wright et al., 2007; 2013). In *P. vulgaris*, this transition is represented by the shift from heterostyly to homostyly (Li et al., 2016; Huu et al., 2016). Heterostyly is a floral polymorphism that promotes outcrossing that has been reported in  at least 28 families of plants. Conversely, homostyly is associated with self-fertilization. This transistion has occured in many species of *Primula*. In *P. vulgaris*, the transition to homostyly has been reported in England (Mora-Carrera et al., 2021).
 
 Aims of the project:
-- Determine what are the genomic consequences of the recent range expansion of Primula vulgaris
-- Determine what are the genomic consequences of the shift from heterotyly to homostyly in P. vulgaris
+- Determine what are the genomic consequences of the recent range expansion of *P. vulgaris*
+- Determine what are the genomic consequences of the shift from heterotyly to homostyly in *P. vulgaris*
 
 What do you have:
 ```
 -Paired-end sequences (*.fastq.gz) from 24 individuals from four populations of Primula vulgaris
   -Turkey (TR), Swizterland (CH), England 1 (EN1), and England 2 (EN2).
   -All populations are heterostylous except from EN2.
--A reference genome (*.fasta) from Primula veris 
+-A reference genome (*.fasta) from *Primula veris* 
 ```
 
 What are you expected to do in this project:
