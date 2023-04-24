@@ -1,5 +1,6 @@
 # VCF filtering
 
+<style>body {text-align: justify}</style>
 In your second practical session you did a variant calling. Just as a reminder you usually take some sequencing reads (in .fastq format) and map them into a reference genome (.fasta) using BWA, bowtie or any other alignment program. The resulting file after the mapping is a file in either SAM or BAM format. With these files you can do the variant calling with GATK, FreeBayes, or BCFTOOLS. The resulting file after the variant calling is a Variant Calling File (VCF). In this file you have all the information about invariable and variable sites and its associated quality values.
 
 Often after the variant calling we end up with a very messy and long VCF file that is full of sequencing errors, genotyping errors during variant calling, some invariant sites that tell nothing about diversity and so on. So we need to do some cleaning of the VCF file to keep high quality sequencing sites so that we can perform some analyses.
