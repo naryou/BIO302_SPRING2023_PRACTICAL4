@@ -1,6 +1,5 @@
 # VCF filtering
 
-<style>body {text-align: justify}</style>
 In your second practical session you did a variant calling. Just as a reminder you usually take some sequencing reads (in .fastq format) and map them into a reference genome (.fasta) using BWA, bowtie or any other alignment program. The resulting file after the mapping is a file in either SAM or BAM format. With these files you can do the variant calling with GATK, FreeBayes, or BCFTOOLS. The resulting file after the variant calling is a Variant Calling File (VCF). In this file you have all the information about invariable and variable sites and its associated quality values.
 
 Often after the variant calling we end up with a very messy and long VCF file that is full of sequencing errors, genotyping errors during variant calling, some invariant sites that tell nothing about diversity and so on. So we need to do some cleaning of the VCF file to keep high quality sequencing sites so that we can perform some analyses.
@@ -29,7 +28,7 @@ FORMAT/DP > 10
 FORMAT/DP < 400 QUAL > 100
 ```
 
-If you want to know more about what do these and other argument means, you can look here (https://gatk.broadinstitute.org/hc/en-us/articles/360035890471-Hard-filtering-germline-short-variants).
+If you want to know more about what do these and other argument means, you can look [here](https://gatk.broadinstitute.org/hc/en-us/articles/360035890471-Hard-filtering-germline-short-variants).
 
 **Hint:** If you want to use the 'Exclude' option you will just need to flip the '> or <' around.
 
@@ -71,7 +70,7 @@ Galaxy has (apparently) many tools to analyze genetic structure and estimate gen
 
 Now that you know how the STRUCTURE results looks like, we will compare with a the PCA. Both methods are clustering analyses. The main difference is that one (STRUCTURE) is a model-based method that works using some assumption about allelic frequencies of populations in an evolutionary framework (e.g., using Hardy-Weinberg equilibrium), whereas the other one (PCA) is a model-free analysis that has no underlying assumption. Usually both analyses give similar results. In papers of population genetics you usually see both of them next to each other.
 
-For the PCA we will use the package 'vcfR' in Rstudio and a shortened version of the VCF that you used for the filtering (**merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf**). You can download this file to your computer here (https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf).
+For the PCA we will use the package 'vcfR' in Rstudio and a shortened version of the VCF that you used for the filtering (**merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf**). You can download this file to your computer [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf).
 
 For the analyses in Rstudio, we first will set up the directory where we have all the data in your computer by clicking in 'Session > Set Working Directory > Choose Directory ...'. Alternatively, you can use the following command:
 
@@ -141,7 +140,7 @@ You will need to specify the number of axes (eigenvalues) to use. One plot was c
 
 There are many programs and packages to estimate genetic diversity of a population. Some programs/packages are better or more efficient than others. In R one can work with VCF files. However, VCF files cannot be use right away and they usually need to be trasnformed into a more efficient format.
 
-Today we are going to use the package 'PopGenome'. It stopped been updated a couple of years ago but we can still get the package in the archive (https://cran.r-project.org/src/contrib/Archive/PopGenome/). If you have not installed the package in Rstudio, you just need to download the file called 'PopGenome_2.7.5.tar.gz' and run the following command:
+Today we are going to use the package 'PopGenome'. It stopped been updated a couple of years ago but we can still get the package in the [archive](https://cran.r-project.org/src/contrib/Archive/PopGenome/). If you have not installed the package in Rstudio, you just need to download the file called 'PopGenome_2.7.5.tar.gz' and run the following command:
 
 ```
 install.packages("~/DIRECTORY_YOU_HAVE_THE_FILE/PopGenome_2.7.5.tar.gz", repos=NULL, type="source") library(PopGenome_2.7.5.tar.gz) #To check if it installed correctly
@@ -228,7 +227,7 @@ GENOME.class <- neutrality.stats(GENOME.class, FAST=TRUE) get.neutrality(GENOME.
 
 Again, take a look at which population has the higher number of segregating (i.e., polymorphic sites). What does this mean?
 
-Another test I didnt mentioned in the class was Tajima's D. The program also gives you a result for this test. Do you see any difference among populations? What does these results mean? Go on wikipedia (https://en.wikipedia.org/wiki/Tajima%27s_D) and read about how to interpret Tajima's D (this will take you 5 min). Based on the results of these population, can you say something about them?
+Another test I didnt mentioned in the class was Tajima's D. The program also gives you a result for this test. Do you see any difference among populations? What does these results mean? Go on wikipedia and read about how to interpret [Tajima's D](https://en.wikipedia.org/wiki/Tajima%27s_D) (this will take you 5 min). Based on the results of these population, can you say something about them?
 
 We can also estimate the extent of linkage disequilibrium (LD). Based on the previous results and what we saw on class about genetic bottlenecks, can you make a prediction of the extent of LD that we expect on these three populations?
 
@@ -321,3 +320,5 @@ Now go back and put W(AA) back to 1.00 and play around with the initial frequnec
 Now we said earlier that Genetic Drift will determine the efficacy of Natural Selection. The stronger the genetic drift the less selection is. To see this, play around with fitness of W(AA) and reduce Ne. What happens? You can also play around with p0. What would happen to a new mutation that increase fitness but is in a population with a small Ne? For instance, what happens in a mutation causes an increase of 80-90% in fitness?
 
 With this we ahve reached the end of our journey into the exciting field of population genomics. You can now go home and have some rest.
+
+
