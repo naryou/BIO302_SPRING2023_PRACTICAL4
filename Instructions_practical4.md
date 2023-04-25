@@ -62,6 +62,77 @@ With this VCF file we can now do a lot of population genetic analyses.
 
 # Analzying population structure with: STRUCTURE
 
+**Background**
+To investigate the genetic structure of a population from genotype data we use one of the most widely used software called [Structure](https://web.stanford.edu/group/pritchardlab/structure.html). Structure uses a Bayesian algorithm to group the individuals based on similarities/differences in their allele frequencies. The user sets the number of *assumed* groups or clusters (K) as a prior and Structure tries to group the individuals in those K clusters while maximizing the likelihood of shared genetic variation in each group. It's common to run the software for a range of pre-selected clusters (for instance K from 1 to 5) and then compare the results. There are also available methods to compare the different clsuters and estimate the **Best K** which is the most likely number of genetic clusters in our data.  
+You can read more about Structure in the overview article [here](https://www.frontiersin.org/articles/10.3389/fgene.2013.00098/full). *You can find this article also on OLAT.*
+
+## Running Structure on Galaxy 
+
+Download the structure file from [this link](URL by Emiliano) and upload it to your Galaxy history. Change the format to **tsv** (click on the pencil icon, convert, set **New Type** as **tsv** and save).
+From Tools panel, choose [**Structure** using multi-locus genotype data to investigate population structure](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/structure/structure/2.3.4+galaxy1)
+
+Set the following parameters:
+
+
+**Genotype data**: SNPs_mac_TR_SK_CH_pve001_var_832_3pop.tsv
+
+**Number of runs**: 2
+
+**Number of populations assumed** or [K]: 1
+
+**Length of burnin period**: 50000
+
+**Number of MCMC reps after burnin**: 200000
+
+**Number of diploid individuals in data file**: 30
+
+**Number of loci in data file**: 832
+
+**Input file contains individual labels**: Yes
+
+**Input file contains a user-defined population-of-origin for each individual**: Yes
+
+**Data file contains row of marker names**: No
+
+In `extraparams` section, set:
+
+**Use POPDATA for location information:** No
+
+
+and click on `Run Tool`
+
+This generates four outputs:
+- run_K_1.out
+- run_K_1.log
+- run_K_1.mainparams
+- run_K_1.extraparams
+
+When running Structure, we need to assume a range of populations or clusters (**K**) and later find out which number of clusters is best explaining the genetic variation in our data. Therefore, you need to repeat the Structure run again, each time for a different K value (*Number of populations assumed*): K=2, 3, 4 and 5. All other parameters are kept the same as for K=1.
+
+## Visualizing the Structure results
+Download the run_K_x.out files to your computer. If they are zipped, unzip them. You should have the following files on your computer:
+```
+K_1_run_1_f
+K_1_run_2_f
+K_2_run_1_f
+K_2_run_2_f
+K_3_run_1_f
+K_3_run_2_f
+K_4_run_1_f
+K_4_run_2_f
+K_5_run_1_f
+K_5_run_2_f
+```
+
+Now zip all the files together (e.g., select all files and choose 'add to run.zip'). Go to the [CLUMPAK webpage](http://clumpak.tau.ac.il/) and upload the zipped file in **Upload zip file containing STRUCTURE/ADMIXTURE runs**. Give your email address and click on **Submit Form**. This will take a few minutes to run and will give you the results in a PDF file and zip summary. Download them to your computer. Inspect the plots and discuss them among yourselves. There are 5 plots, representing K 1-5. Each horizental bar is one individual and each color is one genetic cluster. What do you understand from the plots? 
+
+## Estimating the best K
+
+Now we go back to Clumpak webpage and choose [**Best K**](http://clumpak.tau.ac.il/bestK.html) from the top banner.
+Upload the zip file again, give your email address and click on 'Submit Form'. It will take a few minutes to run and will give the results in PNG files and a summary file. Download them to your computer.
+
+What is the best K estimated based on Evanno method? Does it differ from the estimated best K from the Ln Prob. method?
+
 # Population genomic analyses with Rstudio
 
 Galaxy has (apparently) many tools to analyze genetic structure and estimate genetic diveristy. However, some of these tools have been outdated so we cannot use them. For that reason we will use R to make some of the basic analyses. In reality we do these analyses in the command line using (mostly) UNIX or python languages. Fortunately, you will not need have to do any UNIX stuff. However, if you are curious on how this looks like you can ask me or any of the other TAs so that you see how each tool looks like in the command line.
